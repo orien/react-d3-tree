@@ -6,9 +6,10 @@
     "^.+\\.jsx?$": "babel-jest",
     "\\.(ts|tsx)$": "ts-jest"
   },
-  "transformIgnorePatterns": ["node_modules/(?!(d3-.+))"],
+  "transformIgnorePatterns": ["node_modules/(?!(d3-.+|uuid))"],
   "moduleNameMapper": {
     ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/jest/mocks/cssModule.js",
+    "^uuid$": "<rootDir>/node_modules/uuid/dist/index.js",
     "(.*)\\.js$": "$1"
   },
   "setupFilesAfterEnv": ["<rootDir>/jest/setup.ts"],
